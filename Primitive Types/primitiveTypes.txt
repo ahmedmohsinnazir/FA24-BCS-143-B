@@ -1,0 +1,14 @@
+public class primitiveTypes
+{
+	public static void main(String args[])
+	{
+		int i = 0;
+		short s = 5;
+		byte b = 100;
+		long l = 300;
+		float f = 10.0;
+		double d = 400.0;
+		char ch = 'c';
+		boolean bool = true; // or false
+	}
+}
