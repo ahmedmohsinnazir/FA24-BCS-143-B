@@ -1,0 +1,82 @@
+public class Product
+{
+	static int id = 0;
+	private String name;
+	private int quantity;
+	private double price;
+	private String category;
+
+	Product(String name, int quantity, double price, String category)
+	{
+		this.name = name;	
+		this.quantity = quantity;
+		this.price = price;
+		this.category = category;
+		id++;	
+	}
+
+	void setName(String name)
+	{
+		this.name = name;
+	}
+
+	void setQuantity(int quantity)
+	{
+		this.quantity = quantity;
+	}
+
+	void setPrice(double price)
+	{
+		this.price = price;
+	}
+
+	void setCategory(String category)
+	{
+		this.category = category;
+	}	
+
+	String getName()
+	{
+		return name;
+	}
+
+	String getQuantity()
+	{
+		return quantity;
+	}
+
+	String getPrice()
+	{
+		return price;
+	}
+
+	String getCategory()
+	{
+		return name;
+	}
+
+	void displayDetails()
+	{
+		System.out.printf("\n Product ID: " + id + "\n Name: " + name + "\n Quantity: " 
+		+ quantity + "\n Price: Rs." + price + "\n Category: " + category);
+	}	
+
+	public static void main(String args[])
+	{
+		Product p1 = new Product("Headphone", 4, 1000, "Electronics");
+		Product p2 = new Product("Speaker", 2, 2000, "Electronics");
+		Product p3 = new Product("Microphone", 5, 500, "Electronics");
+		Product p4 = new Product("Monitor", 1, 5000, "Electronics");
+		Product p5 = new Product("", 4, 1000, "Electronics");
+
+		p1.displayDetails();
+		p2.displayDetails();
+		p3.displayDetails();
+		p4.displayDetails();
+	}
+
+
+
+
+	
+}
