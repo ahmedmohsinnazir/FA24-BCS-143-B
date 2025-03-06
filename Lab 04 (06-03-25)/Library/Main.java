@@ -12,7 +12,7 @@ public class Main
 
 		Date d1 = new Date(1, 3, 2025);
 
-		Book b1 = new Book("The Martian", "E2398H", d1, p1);
+		Book b1 = new Book("The Alchemist", "E2398H", d1, p1);
 
 		Library l1 = new Library("Pine Avenue Library", b1, p2, p3);
 
