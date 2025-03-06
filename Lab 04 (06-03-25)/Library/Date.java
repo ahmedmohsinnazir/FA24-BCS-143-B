@@ -1,70 +1,68 @@
-public class Date
+public class Date 
 {
 	private int day;
-	private int month;
-	private int year;
+        private int month;
+        private int year;
 
-	Date(int day, int month, int year)
+        public Date(int day, int month, int year) 
 	{
-		this.day = day;
-		this.month = month;
-		this.year = year;
-	}
+        	this.day = day;
+        	this.month = month;
+        	this.year = year;
+        }
 
-	Date(Date other) // Copy constructor
+        public Date(Date other) 
 	{
-		this.day = other.day;
-		this.month = other.month;
-		this.year = other.year;
-	}
+        	this.day = other.day;
+        	this.month = other.month;
+        	this.year = other.year;
+    	}
 
-	public void showDate()
+        public void showDate() 
 	{
-		System.out.println("Day: " + day);
-		System.out.println("Month: " + month);
-		System.out.println("Year: " + year);
-		
-	}
+        	System.out.println(day + "-" + month + "-" + year);
+    	}
 
-	public boolean equals(Date obj)
-	{
-		if((this.day == obj.day) && (this.month == obj.month) && (this.year == obj.year))
+	public boolean equals(Object obj) 
+	{ 
+        	Date date = (Date) obj;
+        	if(day == date.day && month == date.month && year == date.year;)
 		{
 			return true;
 		}
 		else
 		{
-			return false;
+			return false;		
 		}
-	}
+    	}
 
-	public int getDay()
+        public int getDay() 
 	{
-		return day;
-	}
+        	return day;
+    	}
 
-	public void setDay(int day)
+        public void setDay(int day) 
 	{
-		this.day = day;
-	}
+        	this.day = day;
+        }
 
-	public int getMonth()
+        public int getMonth() 
 	{
-		return month;
-	}
+        	return month;
+        }
 
-	public void setMonth(int month)
+        public void setMonth(int month) 
 	{
-		this.month = month;
-	}
+        	this.month = month;
+        }
 
-	public int getYear()
+        public int getYear() 
 	{
-		return year;
-	}
+        	return year;
+        }
 
-	public void setYear(int year)
+        public void setYear(int year) 
 	{
-		this.year = year;		
-	}	
+        	this.year = year;
+    	}
 }
