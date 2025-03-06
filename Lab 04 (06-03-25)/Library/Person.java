@@ -16,7 +16,7 @@ public class Person
 	{
 		this.name = other.name;
 		this.role = other.role;
-		this.address = other.address;
+		this.address = new Address(other.address);
 	}
 
 	public void showPersonDetails()
@@ -28,16 +28,17 @@ public class Person
 		System.out.println("City: " + address.getCity());		
 	}
 
-	public boolean equals(Person obj)
+	public boolean equals(Object obj) 
 	{
-		if((this.name == obj.name) && (this.role == obj.role))
+    		Person person = (Person) obj;
+    		if((name.equals(person.name)) && (role.equals(person.role)) && (address.equals(person.address)))
 		{
 			return true;
 		}
 		else
 		{
-			return false;	
-		}		
+			return false;
+		}
 	}
 
 	public String getName()
