@@ -13,33 +13,39 @@ public class Book
 		this.author = author;	
 	}
 
-	Book(Book other)
+	Book(Book other) 
 	{
-		this.title = other.title;
-		this.issn = other.issn;
-		this.publicationDate = other.publicationDate;
-		this.author = other.author;
+    		this.title = other.title;
+    		this.issn = other.issn;
+    		this.publicationDate = new Date(other.publicationDate); 
+    		this.author = new Person(other.author); 
 	}
 
-	public void showBookDetails()
+
+	public void showBookDetails() 
 	{
-		System.out.println("Book title: " + title);
-		System.out.println("Book author: " + author);
-		System.out.println("Book publication date: " + publicationDate);
-		System.out.println("Book author: " + author);
+    		System.out.println("Book title: " + title);
+    		System.out.println("Book ISSN: " + issn);
+    		System.out.print("Book publication date: ");
+    		publicationDate.showDate();
+    		System.out.println("Book author: ");
+    		author.showPersonDetails(); 
 	}
 
-	public boolean equals(Book obj)
+
+	public boolean equals(Object obj) 
 	{
-		if(obj.issn == this.issn)
+        	Book book = (Book) obj;
+    		if(issn.equals(book.issn))
 		{
-			return true;
+			return true;	
 		}
 		else
 		{
-			return false;
+			return false;	
 		}
 	}
+
 
 	public String getTitle()
 	{
