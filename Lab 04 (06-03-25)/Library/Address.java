@@ -21,15 +21,16 @@ public class Address
 		System.out.println("City: " + city);
 	}
 
-	public boolean equals(Address obj)
+	public boolean equals(Object obj) 
 	{
-		if((this.street == obj.street) && (this.city == obj.city))
+    		Address address = (Address) obj;
+    		if((street.equals(address.street)) && (city.equals(address.city)))
 		{
 			return true;
 		}
 		else
 		{
-			return false;
+			return false;	
 		}
 	}
 
@@ -48,7 +49,7 @@ public class Address
 		return city;
 	}
 
-	public void setCity()
+	public void setCity(String city)
 	{
 		this.city = city;	
 	}
