@@ -26,7 +26,7 @@ public class Date
 	public boolean equals(Object obj) 
 	{ 
         	Date date = (Date) obj;
-        	if(day == date.day && month == date.month && year == date.year;)
+        	if((day == date.day) && (month == date.month) && (year == date.year))
 		{
 			return true;
 		}
